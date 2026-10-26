@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore remarkable objects, stories and collections with the Museum Guide.">
+  <title>Museum Guide — Discover Stories Beyond Time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Museum Guide home">
+      <span class="brand-mark">M</span>
+      <span>MUSEUM<span class="brand-light"> GUIDE</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#explore">Explore</a>
+      <a class="nav-link" href="#visit">Plan your visit</a>
+      <a class="nav-link" href="#about">About</a>
+    </nav>
+    <a class="header-cta" href="#explore">Discover exhibits <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image" role="img" aria-label="Sunlight falling across a museum gallery"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow light-eyebrow"><span></span> A world of wonder awaits</p>
+        <h1>Discover stories<br> <em>beyond time.</em></h1>
+        <p class="hero-copy">Every object holds a story. Wander through centuries of creativity, culture and human history.</p>
+        <a class="button button-gold" href="#explore">Explore the collection <span aria-hidden="true">→</span></a>
+        <div class="hero-note"><span class="note-line"></span> ART · HISTORY · CULTURE</div>
+      </div>
+      <div class="hero-index"><span>01</span> / 06</div>
+    </section>
+
+    <section class="intro section-wrap" id="about">
+      <div class="intro-label"><span class="small-rule"></span> YOUR PERSONAL MUSEUM COMPANION</div>
+      <div class="intro-main">
+        <h2>Curiosity is the<br>beginning of <em>discovery.</em></h2>
+        <div class="intro-text">
+          <p>Welcome to a place where the past comes alive. Explore extraordinary artifacts, meet the minds behind masterpieces, and uncover the stories that connect us across generations.</p>
+          <a class="text-link" href="#explore">Meet the collection <span>↗</span></a>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><strong>06</strong><span>Curated highlights</span></div>
+        <div class="stat"><strong>05+</strong><span>Areas to discover</span></div>
+        <div class="stat"><strong>∞</strong><span>Stories to uncover</span></div>
+      </div>
+    </section>
+
+    <section class="collection-section" id="explore">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> THE COLLECTION</p>
+            <h2>Find your next <em>wonder.</em></h2>
+          </div>
+          <p class="heading-note">From ancient civilizations to timeless works of art, begin your journey here.</p>
+        </div>
+
+        <div class="explore-tools">
+          <label class="search-box" for="searchInput">
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="Search artifacts, eras, stories..." autocomplete="off">
+            <kbd>SEARCH</kbd>
+          </label>
+          <div class="filter-list" id="filterList" aria-label="Filter exhibits by category">
+            <button class="filter-chip selected" data-category="all">All exhibits</button>
+            <button class="filter-chip" data-category="Ancient Egypt">Ancient Egypt</button>
+            <button class="filter-chip" data-category="Sculpture">Sculpture</button>
+            <button class="filter-chip" data-category="Painting">Painting</button>
+            <button class="filter-chip" data-category="Archaeology">Archaeology</button>
+            <button class="filter-chip" data-category="Natural History">Natural history</button>
+          </div>
+        </div>
+
+        <div class="results-line"><span id="resultCount">Loading collection…</span><span>SELECT AN EXHIBIT TO LEARN MORE ↗</span></div>
+        <div class="exhibit-grid" id="exhibitGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <span class="empty-icon">⌕</span>
+          <h3>No exhibits found</h3>
+          <p>Try another search term or select a different category.</p>
+          <button class="button button-dark" id="clearFilters">Clear filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="quote-mark">“</div>
+      <blockquote>The purpose of art is washing the dust of daily life off our souls.</blockquote>
+      <p>ART HAS THE POWER TO CONNECT US</p>
+    </section>
+
+    <section class="visit-section section-wrap" id="visit">
+      <div class="visit-copy">
+        <p class="eyebrow"><span></span> MAKE A DAY OF IT</p>
+        <h2>Your journey<br>starts <em>here.</em></h2>
+        <p>Take your time. Follow your curiosity. Let each gallery reveal something unexpected.</p>
+        <div class="visit-details">
+          <div><span class="detail-icon">◷</span><div><strong>Suggested visit</strong><span>Allow 1–2 hours to explore</span></div></div>
+          <div><span class="detail-icon">⌖</span><div><strong>Explore at your pace</strong><span>Discover exhibits by category</span></div></div>
+          <div><span class="detail-icon">✧</span><div><strong>Stay curious</strong><span>Read the stories behind each object</span></div></div>
+        </div>
+        <a class="button button-dark" href="#explore">Start exploring <span>→</span></a>
+      </div>
+      <div class="visit-image">
+        <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1200&q=85" alt="Art displayed inside a quiet gallery" loading="lazy">
+        <div class="image-caption"><span>THE BEAUTY OF DISCOVERY</span><span>EST. IN WONDER</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">M</span><span>MUSEUM<span class="brand-light"> GUIDE</span></span></a>
+    <p>Preserving the past. Inspiring the future.</p>
+    <div class="footer-bottom"><span>© <span id="year"></span> Museum Guide · Educational demo project</span><a href="#home">Back to top ↑</a></div>
+  </footer>
+
+  <dialog class="exhibit-dialog" id="exhibitDialog" aria-labelledby="dialogTitle">
+    <button class="dialog-close" id="dialogClose" aria-label="Close exhibit details">×</button>
+    <img id="dialogImage" src="" alt="">
+    <div class="dialog-content">
+      <p class="eyebrow" id="dialogCategory"></p>
+      <h2 id="dialogTitle"></h2>
+      <p class="dialog-era" id="dialogEra"></p>
+      <p id="dialogDescription"></p>
+      <p class="dialog-location" id="dialogLocation"></p>
+    </div>
+  </dialog>
+</body>
+</html>
